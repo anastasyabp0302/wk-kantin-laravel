@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JajananController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,6 @@ Route::get('/', function () {
 });
 
 Route::resource('jajanans', JajananController::class);
+Route::get('/jajanans', [JajananController::class, 'index'])->name('jajanans.index');
+Route::get('/jajanans/{id}', [JajananController::class, 'show'])->name('products.show');
+Route::get('/jajanans/{id}', [JajananController::class, 'show'])->name('products.show');
